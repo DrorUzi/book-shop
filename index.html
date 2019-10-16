@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>book-shop</title>
+    <title data-trans="web-title">book-shop</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
@@ -13,29 +13,35 @@
 
 <body onload="onInit()">
     <div class="container-fluid">
-        <h1>WELCOME TO MY BOOK SHOP</h1>
-        <h2>The best books online</h2>
+        <h1 class="header" data-trans="title">WELCOME TO MY BOOK SHOP</h1>
+        <h2 class="second-header"data-trans="subtitle">The best books online</h2>
+        <select class="btn"onchange="onSetLang(this.value)">
+                <option value="en">English</option>
+                <option value="he">עברית</option>
+            </select>
       </div>
       <div class="second-container-fluid">
-    <button type="button" class="add-book btn btn-dark" onclick="readAndAddNewBook()">Add new book</button>
+          <div class="table-container">
+    <button type="button" class="add-book btn" data-trans="add" onclick="readAndAddNewBook()">Add new book</button>
     <table class="books-table">
         <thead>
-            <th class="Name" onclick="onSortBooks(this)">Name</th>
-            <th class="Price" onclick="onSortBooks(this)">Price</th>
-            <th>Photo</th>
-            <th>Rating</th>
-            <th>Actions</th>
+            <th class="Name" onclick="onSortBooks(this)" data-trans="sort-name">Name</th>
+            <th class="Price" onclick="onSortBooks(this)" data-trans="sort-price">Price</th>
+            <th data-trans="photo">Photo</th>
+            <th data-trans="rating">Rating</th>
+            <th data-trans="actions">Actions</th>
         </thead>
         <tbody class="books">
         </tbody>
     </table>
+</div>
     <div class="modal">
         <div class="modal-content">
         </div>
     </div>
     <div class="pages">
-        <button type="button" class="btn btn-light prev" onclick="onPrevPage()">prev Page</button>
-        <button type="button" class="btn btn-light next" onclick="onNextPage()">Next Page</button>
+        <button type="button" class="btn btn-light prev" onclick="onPrevPage()" data-trans="prev">Prev Page</button>
+        <button type="button" class="btn btn-light next" onclick="onNextPage()" data-trans="next">Next Page</button>
     </div>
       </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -48,6 +54,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="js/util.js"></script>
+    <script src="js/i18n-service.js"></script>
     <script src="js/service.js"></script>
     <script src="js/controller.js"></script>
 </body>

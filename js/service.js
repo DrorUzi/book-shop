@@ -2,10 +2,11 @@
 const BOOKS_KEY = 'books';
 var gNextId = 101;
 var gBooks;
-const booksInPageCount = 2;
+const booksInPageCount = 3;
 var gCurrPage = 0;
 
 createBooks()
+console.log(gBooks);
 
 
 function createBook(name, price, imgUrl) {
