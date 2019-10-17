@@ -37,10 +37,10 @@ function onReadBook(bookId) {
     var book = findBook(bookId);
     var elBookModal = document.querySelector('.modal-content');
     var strHTML = `<button class="close-button" onclick="closeModal()">x</button>
-    <h2>${book.name}</h2>
+    <h2 class="modal-header">${book.name}</h2>
     <img src="img/${book.imgUrl}.jpg" alt="book"/>
-    <h2><span data-trans="price"></span>:${formatCurrency(book.price)}</h2>
-    <h2 data-trans="rating"></h2>
+    <h2 class="modal-header"><span data-trans="price"></span>:${formatCurrency(book.price)}</h2>
+    <h2 data-trans="rating" class="modal-header"></h2>
     <button class="btn-rate" onclick="onRateBook(${bookId}, 1)">+</button><p class="rating-num">${book.rating}</p>
     <button class="btn-rate" onclick="onRateBook(${bookId}, -1)">-</button>`
     elBookModal.innerHTML = strHTML

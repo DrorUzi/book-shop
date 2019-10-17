@@ -1,5 +1,5 @@
 body {
-    background-image: url(../img/background.jpg);
+    background-image: url(../img/background3.jpg);
     flex-direction: column;
     background-position: center center;
     background-attachment: fixed;
@@ -20,11 +20,10 @@ h1, h2 {
     font-family: indieflower;
     font-size: 5rem;
     text-align: center;
-    color: rgb(255, 231, 239);
+    color: rgb(37, 37, 37);
     padding: 1.25rem;
     font-weight: bold;
     margin: 0;
-    text-shadow: 0 5px rgb(0, 0, 0), 0 5px rgb(0, 0, 0);
 }
 
 h1{
